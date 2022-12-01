@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from './Navbar'
 import OffersAndPartners from './OffersAndPartners'
+import Result from './Result'
 import Search from './Search'
 
 const Container = () => {
@@ -8,6 +9,7 @@ const Container = () => {
     <div>
         <Navbar />
         <Search />
+        <Result />
         <OffersAndPartners />
     </div>
   )

@@ -12,7 +12,7 @@ const Navbar = () => {
                 <button>Car Locations</button>
                 <button>Community</button>
             </section>
-            <button>Get Started</button>
+            <button className='login'>Login</button>
         </div>
     )
 }
