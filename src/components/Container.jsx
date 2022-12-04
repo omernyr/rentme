@@ -6,7 +6,7 @@ import Search from './Search'
 
 const Container = () => {
 
-  const [searchCity, setSearchCity] = useState("");
+  const [searchCity, setSearchCity] = useState('');
 
   return (
     <div>

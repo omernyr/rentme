@@ -69,20 +69,12 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  h1 {
-    font-size: 60px;
-    width: 490px;
-    font-weight: 700;
-  }
-
   img {
     position: absolute;
     height: 500px;
     margin-left: -750px;
     margin-top: 250px;
   }
-
   .search-vehicle-form {
     width: 40%;
     height: 5vh;
@@ -91,6 +83,13 @@ body {
     display: flex;
     align-items: center;
 
+    .date {
+      padding: 1em 1.3em;
+      border: none;
+      outline: none;
+      width: 100%;
+      font-size: 17px;
+    }
     span {
       margin-right: 10px;
       margin-top: 5px;
@@ -100,7 +99,6 @@ body {
         height: 25px;
       }
     }
-
     .search-vehicle-input {
       height: 100%;
       outline: none;
@@ -161,10 +159,12 @@ body {
   align-items: center;
   justify-content: center;
 }
+
 .container {
   width: 100%;
   display: flex;
 }
+
 .sidebar {
   width: 400px;
   height: 100vh;

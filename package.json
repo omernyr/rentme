@@ -10,6 +10,8 @@
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
     "react-scripts": "5.0.1",
+    "react-select-async-paginate": "^0.7.0",
+    "rsuite": "^5.23.1",
     "sass": "^1.56.1",
     "web-vitals": "^2.1.4"
   },
