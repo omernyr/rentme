@@ -35,24 +35,38 @@ const Search = () => {
     await fetch(`https://booking-com.p.rapidapi.com/v1/car-rental/search?pick_up_longitude=${cityLocation.longitude}&from_country=sk&pick_up_latitude=${cityLocation.latitude}&currency=AED&drop_off_datetime=${dropoffDate}%2009%3A00%3A00&locale=en-gb&sort_by=recommended&drop_off_latitude=${cityLocation.latitude}&pick_up_datetime=${pickupDate}%2009%3A00%3A00&drop_off_longitude=${cityLocation.longitude}`,
       options)
       .then(response => response.json())
-      .then(response =>
-        response.search_results.map((item) => {
-          console.log(item.vehicle_info.v_name)
-
-          setCarInfo([{
-            vehicle_info: {
-              name: item.vehicle_info.v_name,
-              deposit: item.pricing_info.base_deposit,
-              supplierName: item.supplier_info.name,
-              supplierLogo: item.supplier_info.logo_url,
-              transmission: item.vehicle_info.transmission,
-              group: item.vehicle_info.group,
-              img: item.vehicle_info.image_url
-            }
-          }])
-
+      .then((response) => {
+        const newCarsInfos = response.search_results.map((item) => {
+          return {
+            name: item.vehicle_info.v_name,
+            deposit: item.pricing_info.base_deposit,
+            supplierName: item.supplier_info.name,
+            supplierLogo: item.supplier_info.logo_url,
+            transmission: item.vehicle_info.transmission,
+            group: item.vehicle_info.group,
+            img: item.vehicle_info.image_url
+          }
         })
-      )
+        setCarInfo(newCarsInfos)
+      })
+    // .then(response =>
+    //   response.search_results.map((item) => {
+    //     console.log(item.vehicle_info.v_name)
+
+    //     setCarInfo([{
+    //       vehicle_info: {
+    //         name: item.vehicle_info.v_name,
+    //         deposit: item.pricing_info.base_deposit,
+    //         supplierName: item.supplier_info.name,
+    //         supplierLogo: item.supplier_info.logo_url,
+    //         transmission: item.vehicle_info.transmission,
+    //         group: item.vehicle_info.group,
+    //         img: item.vehicle_info.image_url
+    //       }
+    //     }])
+
+    //   })
+    // )
   }
   return (
     <div className='search'>
