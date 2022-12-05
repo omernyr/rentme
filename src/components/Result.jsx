@@ -1,10 +1,8 @@
 import Car from './Car'
-import data from "../data";
 import SidebarInResult from './SidebarInResult';
-import { useRent } from '../context/RentContext';
+import { useRent } from "../context/RentContext";
 
 const Result = () => {
-
   // const [datas, setDatas] = useState([]);
 
   // useEffect(() => {
@@ -18,15 +16,13 @@ const Result = () => {
   //   console.log("My Data ->", datas);
   // }
   // }, [])
-
-  const { searchCity } = useRent()
+  const { carInfo } = useRent()
 
   return (
     <div className='result'>
-      <SidebarInResult />
-      <button>Click</button>
+      {/* <SidebarInResult /> */}
       <div style={{ display: "flex", flexDirection: "column" }}>
-        {data.map((item, idx) => (
+        {carInfo.length && carInfo.map((item, idx) => (
           <Car key={idx} item={item} />
         ))}
       </div>

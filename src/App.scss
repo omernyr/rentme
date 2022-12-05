@@ -69,14 +69,16 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+
   img {
     position: absolute;
     height: 500px;
     margin-left: -750px;
     margin-top: 250px;
   }
+
   .search-vehicle-form {
-    width: 40%;
+    width: 60%;
     height: 5vh;
     background-color: #fff;
     padding: 20px 30px;
@@ -87,8 +89,10 @@ body {
       padding: 1em 1.3em;
       border: none;
       outline: none;
-      width: 100%;
+      width: 30%;
       font-size: 17px;
+      font-family: 'Lato', sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
     span {
       margin-right: 10px;
@@ -106,13 +110,12 @@ body {
       border: none;
       font-size: 16px;
     }
-
     .search-vehicle-button {
       height: 100%;
       border: none;
       background-color: #000;
       color: #fff;
-      width: 50px;
+      width: 60px;
       font-size: 20px;
       cursor: pointer;
     }
@@ -126,7 +129,6 @@ body {
   width: 100%;
   background-color: #39e2ba;
 }
-
 .car {
   display: flex;
   flex-direction: column;
@@ -149,7 +151,6 @@ body {
     height: 150px;
   }
 }
-
 .offers {
   width: 100%;
   height: 60vh;
@@ -159,7 +160,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .container {
   width: 100%;
   display: flex;

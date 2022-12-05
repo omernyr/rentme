@@ -11,7 +11,7 @@ const Car = ({ item }) => {
             <div className="container">
                 <img src={`${item.img}`} alt="" />
                 <div style={{ display: "flex", flexDirection: "column", width: "50%" }}>
-                    <span> <span><FiInfo /></span> Depozito: <b>1.500 $</b> </span>
+                    <span> <span><FiInfo /></span> Depozito: <b>{item.deposit} $</b> </span>
                     <span> <span><FiInfo /></span> Toplam Km sınırı : <b>3500 km</b> </span>
                     <span> <span><FiInfo /></span> Aracı nasıl teslim alacağım? <b>Adrese teslim</b></span>
                 </div>
