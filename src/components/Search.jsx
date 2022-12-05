@@ -36,8 +36,9 @@ const Search = () => {
       options)
       .then(response => response.json())
       .then(response =>
-        console.log("My data ->", response.search_results.map((item) => {
-          
+        response.search_results.map((item) => {
+          console.log(item.vehicle_info.v_name)
+
           setCarInfo([{
             vehicle_info: {
               name: item.vehicle_info.v_name,
@@ -51,7 +52,7 @@ const Search = () => {
           }])
 
         })
-        ))
+      )
   }
   return (
     <div className='search'>

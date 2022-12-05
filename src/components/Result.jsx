@@ -17,11 +17,13 @@ const Result = () => {
   // }
   // }, [])
   const { carInfo } = useRent()
-
+  console.log("mycar info ->",carInfo)
   return (
     <div className='result'>
       {/* <SidebarInResult /> */}
       <div style={{ display: "flex", flexDirection: "column" }}>
+        
+
         {carInfo.length && carInfo.map((item, idx) => (
           <Car key={idx} item={item} />
         ))}
