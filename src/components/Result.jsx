@@ -1,8 +1,9 @@
 import Car from './Car'
 import data from "../data";
 import SidebarInResult from './SidebarInResult';
+import { useRent } from '../context/RentContext';
 
-const Result = ({ searchCity }) => {
+const Result = () => {
 
   // const [datas, setDatas] = useState([]);
 
@@ -17,6 +18,8 @@ const Result = ({ searchCity }) => {
   //   console.log("My Data ->", datas);
   // }
   // }, [])
+
+  const { searchCity } = useRent()
 
   return (
     <div className='result'>

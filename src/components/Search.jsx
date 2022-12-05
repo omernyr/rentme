@@ -2,19 +2,11 @@ import { FiSearch } from 'react-icons/fi'
 import { CiLocationOn } from 'react-icons/ci'
 import { geoApiOptions, options } from "../api"
 import { useState } from 'react';
+import { useRent } from '../context/RentContext';
 
-const Search = ({ searchCity, setSearchCity }) => {
+const Search = () => {
 
-  const [didSelectDate, setDidSelectDate] = useState({
-    pickup: "2022-12-14",
-    dropoff: null
-  });
-  
-  const [datas, setDatas] = useState([]);
-  const [cityLocation, setCityLocation] = useState({
-    latitude: 0,
-    longitude: 0
-  })
+  const { searchCity, setSearchCity, didSelectDate, setDidSelectDate, cityLocation, setCityLocation } = useRent();
 
   const handleChange = (e) => {
     setSearchCity(e.target.value)
