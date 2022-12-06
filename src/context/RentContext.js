@@ -12,15 +12,18 @@ export const RentProvider = ({ children }) => {
     })
     const [carInfo, setCarInfo] = useState([{
         vehicle_info: {
-            name: "",
-            deposit: 0,
-            supplierName: "",
-            supplierLogo: "",
-            transmission: "Manual",
-            group: "economy",
-            img: "",
+            name: null,
+            deposit: null,
+            supplierName: null,
+            supplierLogo: null,
+            transmission: null,
+            group: null,
+            img: null,
+            accessibility: null,
+            supplier_address: null
         }
-    }])
+    }
+])
     const values = {
         searchCity,
         setSearchCity,

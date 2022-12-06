@@ -8,11 +8,11 @@ export const geoApiOptions = {
 
 
 export const options = {
-    method: 'GET',
-    headers: {
-        'X-RapidAPI-Key': '947592f59bmshcd1b011ed9a5e19p113c80jsna46793ea11b3',
-        'X-RapidAPI-Host': 'booking-com.p.rapidapi.com'
-    }
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'fe83b38e34mshc8c70c0d52b8a61p1ac627jsnbdb546853370',
+		'X-RapidAPI-Host': 'booking-com.p.rapidapi.com'
+	}
 };
 
 
