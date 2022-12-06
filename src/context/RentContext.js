@@ -20,10 +20,19 @@ export const RentProvider = ({ children }) => {
             group: null,
             img: null,
             accessibility: null,
-            supplier_address: null
+            supplier_address: null,
+            rating: {
+                average: null,
+                average_text: null,
+                cleanliness: null,
+                condition: null,
+                efficiency: null,
+                no_of_ratings: null,
+                value_for_money: null,
+            }
         }
     }
-])
+    ])
     const values = {
         searchCity,
         setSearchCity,

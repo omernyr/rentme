@@ -46,7 +46,16 @@ const Search = () => {
             group: item.vehicle_info.group,
             img: item.vehicle_info.image_url,
             accessibility: item.accessibility.pick_up_location,
-            supplier_address: item.supplier_info.address.slice(0,item.supplier_info.address.search(","))
+            supplier_address: item.supplier_info.address.slice(0,item.supplier_info.address.search(",")),
+            rating: {
+              average: item.rating_info.average,
+              average_text: item.rating_info.average_text,
+              cleanliness: item.rating_info.cleanliness,
+              condition: item.rating_info.condition,
+              efficiency: item.rating_info.efficiency,
+              no_of_ratings: item.rating_info.no_of_ratings,
+              value_for_money: item.rating_info.value_for_money
+            },
           }
         })
         setCarInfo(newCarsInfos)

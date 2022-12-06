@@ -140,6 +140,8 @@ body {
 }
 
 .car {
+  border: 1px solid gray;
+  border-radius: 3px;
   background-color: #fff;
   margin-bottom: 3em;
   max-width: 890px;
@@ -224,6 +226,24 @@ body {
           display: block;
           margin-bottom: 0;
         }
+        .rating-popup {
+          background-color: gray;
+          padding: 0.5em 1em;
+          color: #fff;
+          display: flex;
+          flex-direction: column;
+          width: fit-content;
+          display: none;
+          border-radius: 5px;
+          margin-bottom: 50px;
+          margin-left: 5px;
+          span {
+            display: block;
+          }
+        }
+        .active {
+          display: block;
+        }
       }
     }
 
@@ -261,7 +281,7 @@ body {
 }
 
 .car:hover {
-
+  border: none;
   box-shadow: 0 0px 9px 2px rgba(0, 0, 0, 0.242);
   transition: 0.2s;
 }
